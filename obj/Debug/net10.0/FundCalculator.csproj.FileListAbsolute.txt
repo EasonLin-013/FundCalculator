@@ -207,9 +207,6 @@ C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\dotnet.run
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.im4v8g1bhc.wasm
-C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.eto3852oak.pdb
-C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\dotnet.0lovj06e37.js
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.66stpp682q.js.gz
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.1l4onz0xjo.wasm.gz
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.nyb7ae3bsc.wasm.gz
@@ -418,9 +415,6 @@ C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\dotnet.run
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.im4v8g1bhc.wasm.gz
-C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.eto3852oak.pdb.gz
-C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\dotnet.0lovj06e37.js.gz
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\FundCalculator.staticwebassets.runtime.json
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\FundCalculator.staticwebassets.endpoints.json
 C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\FundCalculator.dll
@@ -1111,9 +1105,6 @@ C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\0fct5bz0pa-{0}-5e3
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\6lwl5hyf5w-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\fh3obntdi5-{0}-tptq2av103-tptq2av103.gz
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\qk63pppeis-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\ho101o3jv4-{0}-im4v8g1bhc-im4v8g1bhc.gz
-C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\7pr1n151jt-{0}-eto3852oak-eto3852oak.gz
-C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\tacp26ftdo-{0}-0lovj06e37-0lovj06e37.gz
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\staticwebassets.development.json
@@ -1124,4 +1115,13 @@ C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\FundCalculator.dll
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\refint\FundCalculator.dll
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\FundCalculator.pdb
 C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\ref\FundCalculator.dll
-C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\aa5ll6gmn7-{0}-uxn1ogmkta-uxn1ogmkta.gz
+C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.vt9r2as80m.wasm
+C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.1rakn3ey1p.pdb
+C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\dotnet.gyc61zmgkn.js
+C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.vt9r2as80m.wasm.gz
+C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\FundCalculator.1rakn3ey1p.pdb.gz
+C:\Users\GCTCIT02\FundCalculator\bin\Debug\net10.0\wwwroot\_framework\dotnet.gyc61zmgkn.js.gz
+C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\ho101o3jv4-{0}-vt9r2as80m-vt9r2as80m.gz
+C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\7pr1n151jt-{0}-1rakn3ey1p-1rakn3ey1p.gz
+C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\tacp26ftdo-{0}-gyc61zmgkn-gyc61zmgkn.gz
+C:\Users\GCTCIT02\FundCalculator\obj\Debug\net10.0\compressed\aa5ll6gmn7-{0}-awl5f3siyc-awl5f3siyc.gz

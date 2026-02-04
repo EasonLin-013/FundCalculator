@@ -5,7 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FundCalculator</title>
-    <base href="/FundCalculator/" /" />
+    <script type="text/javascript">
+        // 自動偵測：如果網址包含 localhost，路徑就是 /；否則就是 /FundCalculator/
+        var base = window.location.hostname === 'localhost' ? '/' : '/FundCalculator/';
+        document.write('<base href="' + base + '" />');
+    </script>
     <link rel="preload" id="webassembly" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />

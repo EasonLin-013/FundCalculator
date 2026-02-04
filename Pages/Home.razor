@@ -4,6 +4,98 @@
 
 <h1>基金投資計算器</h1>
 
+<style>
+    /* 基礎容器優化 */
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+        color: #2c3e50;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+
+    /* 讓輸入框與標籤整齊排列 */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #34495e;
+    }
+
+    /* 加大輸入框，方便手指點擊 */
+    input {
+        width: 100%;
+        padding: 12px; /* 增加內距 */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px; /* 關鍵：防止 iPhone 在輸入時自動放大畫面 */
+        box-sizing: border-box;
+    }
+
+    /* 讓按鈕在手機上變成全寬，且更好按 */
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* 結果區塊優化 */
+    .result {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        border-left: 5px solid #28a745;
+    }
+
+    .result h4 {
+        margin: 0 0 10px 0;
+        color: #28a745;
+    }
+
+    /* --- 手機版專屬微調 (螢幕寬度小於 480px) --- */
+    @@media (max-width: 480px) {
+        .container {
+            margin: 10px;
+            padding: 15px;
+            box-shadow: none; /* 手機上簡化陰影 */
+            border: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        input, button {
+            font-size: 16px; /* 統一字體大小，避免排版跑掉 */
+        }
+    }
+</style>
+
 <div class="mb-3">
     <label>每月投資金額:</label>
     <input type="number" @bind="monthlyInvestment" class="form-control" />
