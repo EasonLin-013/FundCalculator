@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "FundCalculator",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-bAHeQ8AZdAUd+Xq3VaunbhTBtdTqQbf3ktAPmbqwdCo=",
+    "hash": "sha256-FFeqihBLm4riEtZOc7N0KNkCU7HIX8qvozCFcdLON6w=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.87vtjjdetb.js"
@@ -1242,16 +1242,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "FundCalculator.wasm",
-        "name": "FundCalculator.vt9r2as80m.wasm",
-        "integrity": "sha256-fSvf24bo1eX6Lw/aBKqzotH9X9+ImOTPm1VnOHQzhWI=",
+        "name": "FundCalculator.bnz4xa2djs.wasm",
+        "integrity": "sha256-dxZGABwAR/kKwdwrIP0NFf6gmWhIEM/Ls/rp/VmFIJY=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "FundCalculator.pdb",
-        "name": "FundCalculator.1rakn3ey1p.pdb",
-        "integrity": "sha256-k8m3pN5oGDnp78NUnJ6D3m5D6L1fVd/6hPdjJwx4Mfs=",
+        "name": "FundCalculator.eanfm04znu.pdb",
+        "integrity": "sha256-WgZDkKjQH+fXQKVFT/OICGBbXByVoG5ayobydThSd8k=",
         "cache": "force-cache"
       }
     ],

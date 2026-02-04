@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FundCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60cb6050eb4f7d161d33e012c0edff121135e77c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+486119b0d4f0b9e3e0bd6588f17192d86e279ef1")]
 [assembly: System.Reflection.AssemblyProductAttribute("FundCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FundCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

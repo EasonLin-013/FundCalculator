@@ -1,134 +1,185 @@
 ﻿@page "/"
 
-<PageTitle>基金投資計算器</PageTitle>
-
-<h1>基金投資計算器</h1>
+<PageTitle>投資增長計算器</PageTitle>
 
 <style>
-    /* 基礎容器優化 */
     .container {
         max-width: 600px;
         margin: 20px auto;
-        padding: 20px;
+        padding: 25px;
         background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     h3 {
         color: #2c3e50;
         text-align: center;
-        font-weight: bold;
-        margin-bottom: 25px;
+        font-weight: 700;
+        margin-bottom: 30px;
     }
 
-    /* 讓輸入框與標籤整齊排列 */
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     label {
         display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-        color: #34495e;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: #7f8c8d;
     }
 
-    /* 加大輸入框，方便手指點擊 */
     input {
         width: 100%;
-        padding: 12px; /* 增加內距 */
-        border: 1px solid #ddd;
+        padding: 12px;
+        border: 2px solid #eee;
         border-radius: 8px;
-        font-size: 16px; /* 關鍵：防止 iPhone 在輸入時自動放大畫面 */
-        box-sizing: border-box;
+        font-size: 16px;
+        transition: border-color 0.3s;
     }
 
-    /* 讓按鈕在手機上變成全寬，且更好按 */
+    input:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
     button {
         width: 100%;
         padding: 15px;
-        background-color: #007bff;
+        background-color: #3498db;
         color: white;
         border: none;
         border-radius: 8px;
         font-size: 18px;
         font-weight: bold;
         cursor: pointer;
-        transition: background-color 0.3s;
         margin-top: 10px;
     }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: #2980b9;
     }
 
-    /* 結果區塊優化 */
-    .result {
+    /* 結果顯示區域 */
+    .result-card {
         margin-top: 30px;
         padding: 20px;
-        background-color: #f8f9fa;
-        border-radius: 8px;
-        border-left: 5px solid #28a745;
+        background-color: #fcfcfc;
+        border-radius: 10px;
+        border: 1px solid #f1f1f1;
     }
 
-    .result h4 {
-        margin: 0 0 10px 0;
-        color: #28a745;
+    .result-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed #eee;
     }
 
-    /* --- 手機版專屬微調 (螢幕寬度小於 480px) --- */
+    .result-item:last-child {
+        border-bottom: none;
+        padding-top: 15px;
+        margin-top: 5px;
+    }
+
+    .label-text { color: #555; }
+    .value-text { font-weight: 600; color: #333; }
+    .total-highlight { 
+        font-size: 1.2rem; 
+        color: #e67e22 !important; 
+        font-weight: 800;
+    }
+
     @@media (max-width: 480px) {
-        .container {
-            margin: 10px;
-            padding: 15px;
-            box-shadow: none; /* 手機上簡化陰影 */
-            border: 1px solid #eee;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        input, button {
-            font-size: 16px; /* 統一字體大小，避免排版跑掉 */
-        }
+        .container { margin: 10px; padding: 15px; }
     }
 </style>
 
-<div class="mb-3">
-    <label>每月投資金額:</label>
-    <input type="number" @bind="monthlyInvestment" class="form-control" />
-</div>
-<div class="mb-3">
-    <label>預期年化報酬率 (%):</label>
-    <input type="number" @bind="annualReturnRate" class="form-control" />
-</div>
-<div class="mb-3">
-    <label>投資年數:</label>
-    <input type="number" @bind="years" class="form-control" />
-</div>
+<div class="container">
+    <h3>📈 投資增長計算器</h3>
 
-<button class="btn btn-primary" @onclick="Calculate">開始計算</button>
-
-@if (totalWealth > 0)
-{
-    <div class="mt-4">
-        <h4>計算結果：</h4>
-        <p>最終累積財富: @totalWealth.ToString("N0") 元</p>
+    <div class="form-group">
+        <label>每月投資金額 (TWD)</label>
+        <input type="number" @bind="monthlyInvestment" />
     </div>
-}
+
+    <div class="form-group">
+        <label>年化報酬率 (%)</label>
+        <input type="number" @bind="annualReturnRate" />
+    </div>
+
+    <div class="form-group">
+        <label>投資年數</label>
+        <input type="number" @bind="years" />
+    </div>
+
+    <button @onclick="Calculate">開始精算</button>
+
+    @* 只要有結果就顯示 *@
+    @if (showResult)
+    {
+        <div class="result-card">
+            <div class="result-item">
+                <span class="label-text">總投入成本 (本金)</span>
+                <span class="value-text">@totalCost.ToString("N0") TWD</span>
+            </div>
+            <div class="result-item">
+                <span class="label-text">單利成長 (本+利)</span>
+                <span class="value-text">@simpleInterestResult.ToString("N0") TWD</span>
+            </div>
+            <div class="result-item">
+                <span class="label-text">複利滾動 (最終價值)</span>
+                <span class="value-text total-highlight">@compoundInterestResult.ToString("N0") TWD</span>
+            </div>
+            <p style="font-size: 13px; color: #2ecc71; margin-top: 15px; text-align: center; font-weight: bold;">
+                ✨ 複利讓您的資產多增長了 @((compoundInterestResult - totalCost).ToString("N0")) 元！
+            </p>
+        </div>
+    }
+</div>
 
 @code {
-    private double monthlyInvestment = 5000;
+    // 1. 在這裡設定預設值
+    private double monthlyInvestment = 20000;
     private double annualReturnRate = 7;
     private int years = 10;
-    private double totalWealth = 0;
+    
+    private double totalCost;
+    private double simpleInterestResult;
+    private double compoundInterestResult;
+    private bool showResult = false;
+
+    // 2. 初始化生命週期：讓網頁一開啟就先算好一次
+    protected override void OnInitialized()
+    {
+        Calculate();
+    }
 
     private void Calculate()
     {
-        double r = annualReturnRate / 100 / 12;
-        int n = years * 12;
-        totalWealth = monthlyInvestment * (Math.Pow(1 + r, n) - 1) / r * (1 + r);
+        if (monthlyInvestment <= 0 || years <= 0) return;
+
+        double r = annualReturnRate / 100;
+        double monthlyR = r / 12;
+        int months = years * 12;
+
+        totalCost = monthlyInvestment * months;
+
+        // 單利邏輯
+        simpleInterestResult = totalCost + (totalCost * r * (years + 1.0/12) / 2);
+
+        // 複利邏輯
+        if (r == 0)
+        {
+            compoundInterestResult = totalCost;
+        }
+        else
+        {
+            compoundInterestResult = monthlyInvestment * (Math.Pow(1 + monthlyR, months) - 1) / monthlyR * (1 + monthlyR);
+        }
+
+        showResult = true;
     }
 }
