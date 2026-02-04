@@ -1,0 +1,42 @@
+﻿@page "/"
+
+<PageTitle>基金投資計算器</PageTitle>
+
+<h1>基金投資計算器</h1>
+
+<div class="mb-3">
+    <label>每月投資金額:</label>
+    <input type="number" @bind="monthlyInvestment" class="form-control" />
+</div>
+<div class="mb-3">
+    <label>預期年化報酬率 (%):</label>
+    <input type="number" @bind="annualReturnRate" class="form-control" />
+</div>
+<div class="mb-3">
+    <label>投資年數:</label>
+    <input type="number" @bind="years" class="form-control" />
+</div>
+
+<button class="btn btn-primary" @onclick="Calculate">開始計算</button>
+
+@if (totalWealth > 0)
+{
+    <div class="mt-4">
+        <h4>計算結果：</h4>
+        <p>最終累積財富: @totalWealth.ToString("N0") 元</p>
+    </div>
+}
+
+@code {
+    private double monthlyInvestment = 5000;
+    private double annualReturnRate = 7;
+    private int years = 10;
+    private double totalWealth = 0;
+
+    private void Calculate()
+    {
+        double r = annualReturnRate / 100 / 12;
+        int n = years * 12;
+        totalWealth = monthlyInvestment * (Math.Pow(1 + r, n) - 1) / r * (1 + r);
+    }
+}
